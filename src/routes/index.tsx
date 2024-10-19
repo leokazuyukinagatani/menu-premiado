@@ -6,6 +6,7 @@ import { RoadMap } from "@/pages/road-map";
 import { TourDetails } from "@/pages/TourDetails";
 import { SignUp } from "@/pages/sign-up";
 import { UserProfile } from "@/pages/Profile";
+import { MinhasConquistas } from "@/pages/MinhasConquistas";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,9 @@ export const router = createBrowserRouter([
   {
     path: "/profile",
     element: <UserProfile/>
-    
+  },
+  {
+    path: "/minhas-conquistas",
+    element: <MinhasConquistas/>
   }
 ]);

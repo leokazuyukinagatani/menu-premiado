@@ -82,23 +82,34 @@ export function Hero() {
                         Você e sua família aproveitando o melhor da culinária
                         local com um gostinho de quero mais!
                     </p>
-                    <div className="flex space-x-4 mb-8  h-16 justify-start">
-                        <Button
-                            className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-48 text-lg"
-                            onClick={handleClickRoteiro}
-                        >
-                            Meu Roteiro
-                        </Button>
+                    <div className="flex gap-4">
+                        <div className="flex space-x-4 mb-8  h-16 justify-start">
+                            <Button
+                                className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-48 text-lg"
+                                onClick={handleClickRoteiro}
+                            >
+                                Meu Roteiro
+                            </Button>
+                        </div>
+                        <div className="flex space-x-4 mb-8 h-16 justify-start">
+                            <Button
+                                
+                                className="h-auto rounded-14 w-48 text-lg border-red-600 text-red-600 hover:bg-red-50"
+                                onClick={()=>navigate("/minhas-conquistas")}
+                            >
+                                Minhas conquistas
+                            </Button>
+                        </div>
                     </div>
                     <div className="flex space-x-8">
                         <div className="flex items-center">
                             <ChefHat className="w-6 h-6 text-red-600 mr-2" />
-                            <span className="text-red-800">20+ Guias</span>
+                            <span className="text-red-800">20+ Pratos</span>
                         </div>
                         <div className="flex items-center">
                             <MapPin className="w-6 h-6 text-red-600 mr-2" />
                             <span className="text-red-800">
-                                17+ Locais únicos
+                                17 Locais únicos
                             </span>
                         </div>
                     </div>
@@ -184,8 +195,7 @@ export function Hero() {
                         </a>
                     ))}
                 </div>
-            </div>
-         */}
+            </div> */}
             <section className="py-12 bg-yellow-50">
                 <div className="container mx-auto px-4">
                     <h3 className="text-3xl font-semibold text-red-800 mb-8 text-center">
