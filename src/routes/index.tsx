@@ -4,6 +4,7 @@ import { CheckIn } from "@/pages/check-in";
 import {
   createBrowserRouter,
 } from "react-router-dom";
+import { SignUp } from "@/pages/sign-up";
 
 export const router = createBrowserRouter([
   {
@@ -18,5 +19,9 @@ export const router = createBrowserRouter([
   {
     path: "/check-in",
     element: <CheckIn/>
+  },
+  {
+    path: "/sing-up",
+    element: <SignUp/>
   }
 ]);
