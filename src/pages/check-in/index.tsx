@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapPin } from "lucide-react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ModalCheckInSuccess } from "@/components/ModalCheckInSuccess";
 import { ModalCheckIn } from "@/components/ModalCheckIn";
 
@@ -11,7 +11,7 @@ export function CheckIn() {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
 
-  // const navigation = useNavigate();
+  const navigation = useNavigate();
 
   const handleCheckIn = () => {
     setShowCheckInModal(true);
@@ -34,11 +34,11 @@ export function CheckIn() {
     setShowSuccessModal(false);
     setPhone("");
     setName("");
-    // navigation("/check-in-success");
+    navigation("/");
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 rounded-2xl">
       <div className="w-[60vw] h-[80vh] border-8 border-red-800 rounded-3xl p-6 md:p-8 relative bg-white">
         <div className="absolute top-4 left-4 md:top-6 md:left-6">
           <img
