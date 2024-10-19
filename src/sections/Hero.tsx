@@ -9,6 +9,13 @@ import { ChefHat, MapPin, Star, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { CarouselCardItem } from "@/components/CarouselCardItem";
+import {   
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,} from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 
 export function Hero() {
@@ -37,6 +44,13 @@ export function Hero() {
         src: "/images/bom-pastel.jpg", // Imagem 3
         alt: "Bom Pastel",
     }
+    ];
+
+    const howToUseSteps = [
+        { title: "Faça Check-in para pontuar", description: "Ganhe pontos ao realizar seu check-in." },
+        { title: "Conclua seu pré-cadastro", description: "Preencha suas informações para começar." },
+        { title: "Conheça os checkpoints do roteiro", description: "Explore os pontos importantes do seu roteiro." },
+        { title: "Conclua sua jornada para mais vantagens", description: "Finalize sua experiência e aproveite!" },
     ];
 
     function handleClickRoteiro() {
@@ -171,6 +185,31 @@ export function Hero() {
                     ))}
                 </div>
             </div>
+        
+            <section className="py-12 bg-yellow-50">
+                <div className="container mx-auto px-4">
+                    <h3 className="text-3xl font-semibold text-red-800 mb-8 text-center">
+                    Como usar
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {howToUseSteps.map((step, index) => (
+                        <Card key={index} className="bg-white border-2 border-red-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <CardHeader className="bg-red-100 py-4">
+                            <CardTitle className="text-red-800 text-base sm:text-lg md:text-xl flex items-center flex-wrap">
+                            <span className="bg-red-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0 text-sm sm:text-base">
+                                {index + 1}
+                            </span>
+                            <span className="flex-grow">{step.title}</span>
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="pt-4">
+                            <p className="text-red-700 text-sm sm:text-base">{step.description}</p>
+                        </CardContent>
+                        </Card>
+                    ))}
+                    </div>
+                </div>
+            </section>
 
             <div className="mt-16 bg-yellow-100 rounded-lg p-8 text-center">
                 <h3 className="text-2xl font-semibold text-red-800 mb-4">
