@@ -17,6 +17,7 @@ import {
     CardHeader,
     CardTitle,} from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 export function Hero() {
     const [email, setEmail] = useState("");
@@ -103,32 +104,32 @@ export function Hero() {
                     </div>
                 </div>
                 <div className="lg:w-1/2">
-                    <Carousel
-                        setApi={setApi}
-                            plugins={[
-                            Autoplay({
-                            delay: 2000,
-                            }),
-                        ]}
-                    >
-                        <CarouselContent>
-                            {items.map((item, index) => (
-                                <CarouselCardItem
-                                    key={index}
-                                    src={item.src}
-                                    alt={item.alt}
-                                />
-                            ))}
-                        </CarouselContent>
-                    </Carousel>
                     <div className="relative">
-                        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md">
+                        <Carousel
+                            setApi={setApi}
+                                plugins={[
+                                Autoplay({
+                                delay: 2000,
+                                }),
+                            ]}
+                        >
+                            <CarouselContent>
+                                {items.map((item, index) => (
+                                    <CarouselCardItem
+                                        key={index}
+                                        src={item.src}
+                                        alt={item.alt}
+                                    />
+                                ))}
+                            </CarouselContent>
+                        </Carousel>
+                        <div className="absolute lg:-bottom-6 lg:-left-6 md:bottom-2 md:left-2 bg-white p-4 rounded-lg shadow-md">
                             <div className="flex items-center mb-2">
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
                             </div>
                             <p className="text-sm text-gray-600">
                                 "Uma jornada culinária inesquecível"
