@@ -134,7 +134,7 @@ export function Hero() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[1, 2, 3].map((tour) => (
-                        <a href="/details" key={tour}>
+                        <a href="/road-map" key={tour}>
                             <div
                                 key={tour}
                                 className="bg-yellow-50 rounded-lg shadow-md overflow-hidden"
@@ -174,22 +174,21 @@ export function Hero() {
 
             <div className="mt-16 bg-yellow-100 rounded-lg p-8 text-center">
                 <h3 className="text-2xl font-semibold text-red-800 mb-4">
-                    Join Our Foodie Community
+                    Junte-se a comunidade GastronoCity
                 </h3>
                 <p className="text-red-700 mb-6">
-                    Subscribe to our newsletter for exclusive offers, new tour
-                    announcements, and local food tips!
+                    Subscreva a nossa newsletter para ofertas exclusivas, novos anúncios turísticos e dicas de comida local!
                 </p>
                 <div className="flex max-w-md mx-auto">
                     <Input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Entre com seu email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="flex-grow mr-2"
                     />
-                    <Button className="bg-red-600 hover:bg-red-700 text-white">
-                        Subscribe
+                    <Button className="bg-red-700 hover:bg-red-500 text-white">
+                        Inscreva-se
                     </Button>
                 </div>
             </div>
