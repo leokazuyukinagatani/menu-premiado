@@ -9,7 +9,15 @@ import { ChefHat, MapPin, Star, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { CarouselCardItem } from "@/components/CarouselCardItem";
+import {   
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,} from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 export function Hero() {
     const [email, setEmail] = useState("");
@@ -37,6 +45,13 @@ export function Hero() {
         src: "/images/bom-pastel.jpg", // Imagem 3
         alt: "Bom Pastel",
     }
+    ];
+
+    const howToUseSteps = [
+        { title: "Faça Check-in para pontuar", description: "Ganhe pontos ao realizar seu check-in." },
+        { title: "Conclua seu pré-cadastro", description: "Preencha suas informações para começar." },
+        { title: "Conheça os checkpoints do roteiro", description: "Explore os pontos importantes do seu roteiro." },
+        { title: "Conclua sua jornada para mais vantagens", description: "Finalize sua experiência e aproveite!" },
     ];
 
     function handleClickRoteiro() {
@@ -92,7 +107,7 @@ export function Hero() {
                     <div className="relative">
                         <Carousel
                             setApi={setApi}
-                             plugins={[
+                                plugins={[
                                 Autoplay({
                                 delay: 2000,
                                 }),
@@ -106,16 +121,15 @@ export function Hero() {
                                         alt={item.alt}
                                     />
                                 ))}
-                              
                             </CarouselContent>
                         </Carousel>
-                        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md">
+                        <div className="absolute lg:-bottom-6 lg:-left-6 md:bottom-2 md:left-2 bg-white p-4 rounded-lg shadow-md">
                             <div className="flex items-center mb-2">
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
-                                <Star className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
+                                <StarFilledIcon className="w-5 h-5 text-yellow-400" />
                             </div>
                             <p className="text-sm text-gray-600">
                                 "Uma jornada culinária inesquecível"
@@ -134,7 +148,7 @@ export function Hero() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[1, 2, 3].map((tour) => (
-                        <a href="/details" key={tour}>
+                        <a href="/road-map" key={tour}>
                             <div
                                 key={tour}
                                 className="bg-yellow-50 rounded-lg shadow-md overflow-hidden"
@@ -171,25 +185,49 @@ export function Hero() {
                     ))}
                 </div>
             </div>
+        
+            <section className="py-12 bg-yellow-50">
+                <div className="container mx-auto px-4">
+                    <h3 className="text-3xl font-semibold text-red-800 mb-8 text-center">
+                    Como usar
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {howToUseSteps.map((step, index) => (
+                        <Card key={index} className="bg-white border-2 border-red-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <CardHeader className="bg-red-100 py-4">
+                            <CardTitle className="text-red-800 text-base sm:text-lg md:text-xl flex items-center flex-wrap">
+                            <span className="bg-red-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0 text-sm sm:text-base">
+                                {index + 1}
+                            </span>
+                            <span className="flex-grow">{step.title}</span>
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="pt-4">
+                            <p className="text-red-700 text-sm sm:text-base">{step.description}</p>
+                        </CardContent>
+                        </Card>
+                    ))}
+                    </div>
+                </div>
+            </section>
 
             <div className="mt-16 bg-yellow-100 rounded-lg p-8 text-center">
                 <h3 className="text-2xl font-semibold text-red-800 mb-4">
-                    Join Our Foodie Community
+                    Junte-se a comunidade GastronoCity
                 </h3>
                 <p className="text-red-700 mb-6">
-                    Subscribe to our newsletter for exclusive offers, new tour
-                    announcements, and local food tips!
+                    Subscreva a nossa newsletter para ofertas exclusivas, novos anúncios turísticos e dicas de comida local!
                 </p>
                 <div className="flex max-w-md mx-auto">
                     <Input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Entre com seu email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="flex-grow mr-2"
                     />
-                    <Button className="bg-red-600 hover:bg-red-700 text-white">
-                        Subscribe
+                    <Button className="bg-red-700 hover:bg-red-500 text-white">
+                        Inscreva-se
                     </Button>
                 </div>
             </div>
