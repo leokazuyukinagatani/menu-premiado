@@ -9,7 +9,11 @@ export function RoadMap() {
     <div className="min-h-screen bg-red-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md border-8 border-red-800 rounded-3xl p-6 md:p-8 relative">
         <div className="absolute top-4 left-4 md:top-6 md:left-6">
-          <Utensils className="h-8 w-8 md:h-10 md:w-10 text-red-800" />
+        <img
+            src={`/images/logo_gastrono_city_sm.svg`}
+            alt="Check In Icon"
+            className="h-100 w-50 md:h-100 md:w-50 text-red-800"
+          />
         </div>
         <div className="text-center mt-16 md:mt-20">
           <h1 className="text-2xl md:text-3xl font-bold mb-4 text-red-800">Meu Roteiro Gastronômico</h1>
