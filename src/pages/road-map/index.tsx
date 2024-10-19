@@ -12,7 +12,7 @@ export function RoadMap() {
         <img
             src={`/images/logo_gastrono_city_sm.svg`}
             alt="Check In Icon"
-            className="h-100 w-50 md:h-100 md:w-50 text-red-800"
+            className="h-20 w-50 md:h-20 md:w-50 text-red-800"
           />
         </div>
         <div className="text-center mt-16 md:mt-20">

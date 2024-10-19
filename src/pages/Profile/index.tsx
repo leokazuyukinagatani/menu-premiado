@@ -23,17 +23,17 @@ export const UserProfile = () => {
         <div className="flex flex-col space-y-4">
           <div>
             <label className="block text-gray-700 font-semibold">Nome:</label>
-            <p className="text-lg">João Silva</p>
+            <p className="text-lg">Lucas Garavaglia</p>
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">
               Telefone:
             </label>
-            <p className="text-lg">(11) 98765-4321</p>
+            <p className="text-lg">(45) 99908-7584</p>
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">Email:</label>
-            <p className="text-lg">joao.silva@email.com</p>
+            <p className="text-lg">lucas.toledo@gmail.com</p>
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">

@@ -39,7 +39,7 @@ export function CheckIn() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 rounded-2xl">
-      <div className="w-[60vw] h-[80vh] border-8 border-red-800 rounded-3xl p-6 md:p-8 relative bg-white">
+      <div className="w-[80vw] h-[80vh] border-8 border-red-800 rounded-3xl p-6 md:p-8 relative bg-white">
         <div className="absolute top-4 left-4 md:top-6 md:left-6">
           <img
             src={`/images/logo_gastrono_city_sm.svg`}

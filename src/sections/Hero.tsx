@@ -79,15 +79,15 @@ export function Hero() {
                     <p className="text-lg lg:text-xl text-red-700 mb-6">
                         Você e sua família aproveitando o melhor da culinária local com um gostinho de quero mais!
                     </p>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                         <Button
-                            className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-full lg:w-48 text-lg"
+                            className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-full sm:w-[45%] text-lg truncate"
                             onClick={handleClickRoteiro}
                         >
                             Meu Roteiro
                         </Button>
                         <Button
-                            className="h-auto rounded-14 w-full lg:w-48 text-lg border-red-600 text-red-600 hover:bg-red-50"
+                            className="h-auto rounded-14 w-full sm:w-[45%] text-lg border-red-600 text-red-600 hover:bg-red-50 truncate"
                             onClick={() => navigate("/minhas-conquistas")}
                         >
                             Minhas conquistas
