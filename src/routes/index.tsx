@@ -4,6 +4,7 @@ import { CheckIn } from "@/pages/check-in";
 import { createBrowserRouter } from "react-router-dom";
 import { RoadMap } from "@/pages/road-map";
 import { TourDetails } from "@/pages/TourDetails";
+import { SignUp } from "@/pages/sign-up";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
   },
   {
     path: "/road-map",
-    element: <RoadMap />,
+    element: <RoadMap/>
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp/>
   },
 ]);
