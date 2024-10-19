@@ -3,6 +3,7 @@ import { Utensils, MapPin } from "lucide-react"
 
 export function RoadMap() {
   const [showTooltip, setShowTooltip] = useState(false);
+  const [showTooltipRest, setShowTooltipRest] = useState(false);
 
   return (
     <div className="min-h-screen bg-red-50 flex items-center justify-center p-4">
@@ -18,12 +19,24 @@ export function RoadMap() {
           <div className="relative mt-10">
             <img src="/images/map_toledo_city_bg.svg" alt="Mapa" className="w-full h-auto rounded-lg" />
             {/* Água Doce Cachaçaria */}
+            <div
+              onMouseEnter={() => setShowTooltipRest(true)}
+              onMouseLeave={() => setShowTooltipRest(false)}
+              >
+            {showTooltipRest && (
+              <div className="absolute bottom-60 left-40 mb-2 px-3 py-2 bg-gray-200 text-gray-800 text-xs rounded shadow-lg">
+                Água Doce Cachaçaria<br/>
+                Rua Panambi, 44 - La Salle
+                <div className="absolute top-full left-1/2 border-4 border-transparent border-t-gray-800"></div>
+              </div>
+            )}
             <img
               src="/images/map_pin_done.svg"
               alt="Água Doce Cachaçaria"
               className="absolute h-16 w-12 hover:h-18 hover:w-14"
               style={{ top: '30%', left: '50%' }} // ajuste conforme necessário
             />
+            </div>
             {/* Restaurante Pantanal */}
             <img
               src="/images/map_pin_default.svg"
