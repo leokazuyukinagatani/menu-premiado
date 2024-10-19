@@ -2,7 +2,7 @@ import { ArrowLeft, Award } from 'lucide-react';
 
 export const UserProfile = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-red-600 text-white">
+    <div className="min-h-screen flex justify-center items-center">
       <div className="bg-white text-black rounded-lg shadow-lg p-6 w-full max-w-sm">
         <div className="flex items-center mb-4">
           <button className="text-red-600" onClick={() => window.location.href = '/'}>
