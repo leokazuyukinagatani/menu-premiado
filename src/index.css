@@ -5,11 +5,11 @@
 @tailwind utilities;
 @layer base {
   html {
-    @apply bg-s1;
+    @apply bg-s7;
   }
 
   body {
-    @apply font-poppins text-[16px] tracking-[-0.03em] text-p5;
+    @apply font-poppins text-[16px] tracking-[-0.03em] text-red-500;
   }
 
   a {
@@ -167,7 +167,7 @@
   }
 
   .dot {
-    @apply size-1.5 rounded-full bg-p2 max-lg:hidden;
+    @apply size-1.5 rounded-full bg-red-500 max-lg:hidden;
   }
 
   .sidebar-before {

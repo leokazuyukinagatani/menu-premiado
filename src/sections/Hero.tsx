@@ -10,7 +10,7 @@ export function Hero() {
         <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <div className="flex flex-col lg:flex-row items-center justify-between">
                 <div className="lg:w-1/2 mb-8 lg:mb-0">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-red-800 mb-4">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-red-700 mb-4">
                         Discover Culinary Delights in Your City
                     </h2>
                     <p className="text-xl text-red-700 mb-6">
@@ -18,12 +18,12 @@ export function Hero() {
                         flavors, hidden gems, and foodie hotspots!
                     </p>
                     <div className="flex space-x-4 mb-8">
-                        <Button className="bg-red-600 hover:bg-red-700 text-white">
+                        <Button className="bg-red-700 hover:bg-red-600 text-white">
                             Book a Tour
                         </Button>
                         <Button
                             variant="outline"
-                            className="border-red-600 text-red-600 hover:bg-red-50"
+                            className="border-red-700 text-red-700 hover:bg-red-50"
                         >
                             Learn More
                         </Button>
@@ -75,6 +75,7 @@ export function Hero() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[1, 2, 3].map((tour) => (
+                        <a href="/details" key={tour}>
                         <div
                             key={tour}
                             className="bg-yellow-50 rounded-lg shadow-md overflow-hidden"
@@ -105,6 +106,7 @@ export function Hero() {
                                 </div>
                             </div>
                         </div>
+                        </a>
                     ))}
                 </div>
             </div>

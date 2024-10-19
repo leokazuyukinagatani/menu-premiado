@@ -9,7 +9,7 @@ interface NavLinkProps {
 const NavLink = ({ title, to }: NavLinkProps) => {
     return (
         <LinkScroll
-            className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h-5"
+            className="base-bold text-red-700 uppercase transition-colors duration-500 cursor-pointer hover:text-red-600 max-lg:my-4 max-lg:h-5"
             to={to}
         >
             {title}
@@ -24,7 +24,7 @@ export function Header() {
     }
 
     return (
-        <header className="fixed top-0 left-0 z-50 w-full py-10 bg-gray-100">
+        <header className="fixed top-0 left-0 z-50 w-full py-10 bg-s6">
             <div className="container flex h-14 items-center max-lg:px-5">
                 <a href="/" className="lg:hidden flex-1 cursor-pointer z-2">
                     {/* <img
@@ -38,7 +38,7 @@ export function Header() {
 
                 <div
                     className={clsx(
-                        "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
+                        "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-gray-200 max-lg:opacity-0",
                         isOpen
                             ? "max-lg:opacity-100"
                             : "max-lg:pointer-events-none"
@@ -100,12 +100,12 @@ export function Header() {
                 </div>
 
                 <button
-                    className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+                    className="lg:hidden z-2 size-10 border-2 border-gray-400/25 rounded-full flex justify-center items-center"
                     onClick={handleToggleMenu}
                     type="button"
                 >
                     <img
-                        src={`/images/${isOpen ? "close" : "magic"}.svg`}
+                        src={`/images/${isOpen ? "close" : "burger-menu"}.svg`}
                         alt="magic"
                         className="size-1/2 object-contain"
                     />

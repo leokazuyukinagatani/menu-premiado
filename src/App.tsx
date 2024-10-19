@@ -1,17 +1,17 @@
+import { RouterProvider } from "react-router";
 import "./App.css";
-import { Footer } from "./sections/Footer";
+import { Toaster } from "./components/ui/toaster";
 
-import { Header } from "./sections/Header";
-import { Hero } from "./sections/Hero";
+import { Main } from "./sections/Main";
+import { router } from "./routes";
 
 function App() {
     return (
-        <main className="overflow-hidden">
-
-            <Header />
-            <Hero />
-            <Footer />
-        </main>
+        <div>
+            <RouterProvider router={router} />
+            <Main />
+            <Toaster />
+        </div>
     );
 }
 
