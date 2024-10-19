@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 interface IModalCheckInSuccess {
   name: string;
@@ -16,7 +16,7 @@ export function ModalCheckInSuccess({
           PARABÉNS, {name.split(" ")[0].toUpperCase()}!
         </h2>
         <div className="flex justify-center mb-4">
-          <Star className="h-16 w-16 text-yellow-400" />
+          <StarFilledIcon className="h-16 w-16 text-yellow-400" />
         </div>
         <p className="text-red-700 text-lg mb-6">PONTO GERADO</p>
         <button
