@@ -5,15 +5,13 @@ import {
     CarouselContent
 } from "@/components/ui/carousel";
 import { Input } from "@/components/ui/input";
-import { ChefHat, MapPin, Star, Users } from "lucide-react";
+import { ChefHat, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { CarouselCardItem } from "@/components/CarouselCardItem";
 import {   
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,} from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
@@ -72,64 +70,50 @@ export function Hero() {
     }, [api]);
 
     return (
-        <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
-            <div className="flex flex-col lg:flex-row items-center justify-between">
-                <div className="lg:w-1/2 mb-8 lg:mb-0 text-left">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-red-700 mb-4">
+        <section className="relative pt-28 pb-10 lg:pt-60 lg:pb-40">
+            <div className="flex flex-col lg:flex-row items-center justify-between px-4">
+                <div className="lg:w-1/2 w-full mb-8 lg:mb-0 text-left">
+                    <h2 className="text-3xl lg:text-5xl font-bold text-red-700 mb-4">
                         GastronoCity
                     </h2>
-                    <p className="text-xl text-red-700 mb-6">
-                        Você e sua família aproveitando o melhor da culinária
-                        local com um gostinho de quero mais!
+                    <p className="text-lg lg:text-xl text-red-700 mb-6">
+                        Você e sua família aproveitando o melhor da culinária local com um gostinho de quero mais!
                     </p>
                     <div className="flex gap-4">
-                        <div className="flex space-x-4 mb-8  h-16 justify-start">
-                            <Button
-                                className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-48 text-lg"
-                                onClick={handleClickRoteiro}
-                            >
-                                Meu Roteiro
-                            </Button>
-                        </div>
-                        <div className="flex space-x-4 mb-8 h-16 justify-start">
-                            <Button
-                                
-                                className="h-auto rounded-14 w-48 text-lg border-red-600 text-red-600 hover:bg-red-50"
-                                onClick={()=>navigate("/minhas-conquistas")}
-                            >
-                                Minhas conquistas
-                            </Button>
-                        </div>
+                        <Button
+                            className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-full lg:w-48 text-lg"
+                            onClick={handleClickRoteiro}
+                        >
+                            Meu Roteiro
+                        </Button>
+                        <Button
+                            className="h-auto rounded-14 w-full lg:w-48 text-lg border-red-600 text-red-600 hover:bg-red-50"
+                            onClick={() => navigate("/minhas-conquistas")}
+                        >
+                            Minhas conquistas
+                        </Button>
                     </div>
-                    <div className="flex space-x-8">
+                    <div className="flex space-x-8 mt-4">
                         <div className="flex items-center">
                             <ChefHat className="w-6 h-6 text-red-600 mr-2" />
                             <span className="text-red-800">20+ Pratos</span>
                         </div>
                         <div className="flex items-center">
                             <MapPin className="w-6 h-6 text-red-600 mr-2" />
-                            <span className="text-red-800">
-                                17 Locais únicos
-                            </span>
+                            <span className="text-red-800">17 Locais únicos</span>
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2 w-full">
                     <div className="relative">
-                        <Carousel
-                            setApi={setApi}
-                                plugins={[
-                                Autoplay({
-                                delay: 2000,
-                                }),
-                            ]}
-                        >
+                        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 2000 })]}>
                             <CarouselContent>
                                 {items.map((item, index) => (
                                     <CarouselCardItem
                                         key={index}
                                         src={item.src}
                                         alt={item.alt}
+                                        // className="w-full h-auto object-cover"
                                     />
                                 ))}
                             </CarouselContent>
@@ -145,9 +129,7 @@ export function Hero() {
                             <p className="text-sm text-gray-600">
                                 "Uma jornada culinária inesquecível"
                             </p>
-                            <p className="text-xs text-gray-500 mt-1">
-                                - Pedro P.
-                            </p>
+                            <p className="text-xs text-gray-500 mt-1">- Pedro P.</p>
                         </div>
                     </div>
                 </div>

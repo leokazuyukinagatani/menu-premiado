@@ -1,5 +1,5 @@
 import  { useState } from 'react'
-import { Utensils, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 export function RoadMap() {
   const [showTooltip, setShowTooltip] = useState(false);

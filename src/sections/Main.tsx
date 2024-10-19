@@ -5,11 +5,9 @@ import { Footer } from './Footer'
 export function Main() {
   return (
     <main className="overflow-hidden">
-
-            <Header />
-            <Hero />
-            <Footer />
-
+      <Header />
+      <Hero />
+      <Footer />
     </main>
   )
 }

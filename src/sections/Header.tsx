@@ -1,4 +1,4 @@
-import {  MedalIcon } from "lucide-react";
+import { MedalIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // para redirecionamento de página
 
 export function Header() {
@@ -10,17 +10,18 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full py-10 bg-s6">
-      <div className="flex  items-center justify-evenly">
-          <img
+    <header className="relative z-50 w-full py-10 bg-s6">
+    <div className="flex items-center justify-between px-4"> {/* Adicione padding se necessário */}
+        <img
             className="w-24 sm:w-40 md:w-32 lg:w-36"
             src="/images/logo_gastrono_city_md.svg"
             alt="logo"
-          />
+        />
         <a className="cursor-pointer" onClick={handleProfileClick}>
-        <MedalIcon className="w-24 h-16 text-yellow-500" />
+            <MedalIcon className="w-24 h-16 text-yellow-500" />
         </a>
-      </div>
-    </header>
+    </div>
+</header>
+
   );
 }
