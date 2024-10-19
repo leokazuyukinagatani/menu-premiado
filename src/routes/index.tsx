@@ -1,5 +1,5 @@
 import { Main } from "@/sections/Main";
-import { TourDetails } from "@/sections/TourDetails";
+import { TourDetails } from "@/pages/TourDetails";
 import {
   createBrowserRouter,
 } from "react-router-dom";
