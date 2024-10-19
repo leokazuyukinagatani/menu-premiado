@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Utensils, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 // import { useNavigate } from "react-router-dom";
 import { ModalCheckInSuccess } from "@/components/ModalCheckInSuccess";
 import { ModalCheckIn } from "@/components/ModalCheckIn";
@@ -41,15 +41,20 @@ export function CheckIn() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="w-[60vw] h-[80vh] border-8 border-red-800 rounded-3xl p-6 md:p-8 relative bg-white">
         <div className="absolute top-4 left-4 md:top-6 md:left-6">
-          <Utensils className="h-8 w-8 md:h-10 md:w-10 text-red-800" />
+          <img
+            src={`/images/logo_gastrono_city_sm.svg`}
+            alt="Check In Icon"
+            className="h-100 w-50 md:h-100 md:w-50 text-red-800"
+          />
         </div>
 
         <div className="flex flex-col justify-center items-center h-full">
           <h1 className="text-2xl md:text-3xl font-bold mb-4 text-red-800 text-center">
-            Bem-vindo ao RestaurantApp
+            Bem-vindo ao GastronoCity
           </h1>
           <p className="text-red-700 mb-8 text-sm md:text-base text-center">
-            Faça check-in para começar sua experiência gastronômica incrível!
+            Faça check-in e comece sua incrível experiência gastronômica
+            enquanto acumula seus pontos!
           </p>
 
           <div className="relative inline-block">
