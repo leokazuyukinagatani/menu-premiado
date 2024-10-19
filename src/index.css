@@ -311,6 +311,15 @@
   }
 
   /*  END of Footer*/
+
+
+  /* Media Queries para ajustar o tamanho em diferentes telas */
+  @media (max-width: 600px) {
+      .carousel-container {
+          aspect-ratio: 4 / 3; /* Ajusta a proporção para telas menores */
+      }
+  }
+
 }
 
 .hidden-on-small {

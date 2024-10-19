@@ -30,10 +30,9 @@ export function Header() {
                     <img
                         src="/images/logo_gastrono_city_md.svg"
                         alt="logo"
-                        width={115}
-                        height={55}
+                        width={60}
+                        height={20}
                     />
-                    GastronoCity
                 </a>
 
                 <div
@@ -48,7 +47,7 @@ export function Header() {
                         <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
                             <ul className="flex max-lg:block max-lg:px-12">
                                 <li className="nav-li">
-                                    <NavLink title="features" to="/features" />
+                                    <NavLink title="Inicio" to="/" />
                                     <div className="dot" />
                                     <NavLink title="pricing" to="pricing" />
                                 </li>
@@ -65,10 +64,9 @@ export function Header() {
                                         <img
                                             src="/images/logo_gastrono_city_md.svg"
                                             alt="logo"
-                                            width={160}
-                                            height={55}
+                                            width={80}
+                                            height={25}
                                         />
-                                        GastronoCity
                                     </LinkScroll>
                                 </li>
 

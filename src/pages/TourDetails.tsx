@@ -18,6 +18,7 @@ import {
     CheckCircle,
     Gift,
     Ticket,
+    ArrowLeft,
 } from "lucide-react";
 import {
     Accordion,
@@ -102,16 +103,16 @@ export function TourDetails() {
 
     return (
         <main className="container mx-auto px-4 py-8">
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
+                    
+                    <a href="/">
+                        <ArrowLeft className="w-6 h-6 text-red-600"/>
+                    </a>
                     <h2 className="text-3xl font-bold text-red-800 mb-4">
-                        GastronoCity
+                        Gourmet Adventure Tour
                     </h2>
-                    <img
-                        src="..\public\images\logo_agua_doce_cachacaria.png?height=400&width=800"
-                        alt="Gourmet Adventure Tour"
-                        className="w-full h-64 object-cover rounded-lg mb-6"
-                    />
 
                     <div className="bg-yellow-50 rounded-lg p-6 mb-6">
                         <h3 className="text-xl font-semibold text-red-800 mb-4">
@@ -187,34 +188,6 @@ export function TourDetails() {
                                         rooftop bar
                                     </li>
                                 </ol>
-                                {/* <div className="h-[400px] rounded-lg overflow-hidden"> */}
-                                    {/* <MapContainer
-                                        center={[40.7128, -74.006]}
-                                        zoom={14}
-                                        style={{
-                                            height: "100%",
-                                            width: "100%",
-                                        }}
-                                    >
-                                        <TileLayer
-                                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                        />
-                                        {itineraryPoints.map((point, index) => (
-                                            <Marker
-                                                key={index}
-                                                position={[
-                                                    point.lat,
-                                                    point.lng,
-                                                ]}
-                                            >
-                                                <Popup>{point.name}</Popup>
-                                            </Marker>
-                                        ))}
-                                    </MapContainer> */}
-                                    {/* <MapWithMarkers center={[40.7128, -74.006]} zoom={14} itineraryPoints={itineraryPoints} /> */}
-
-                                {/* </div> */}
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="inclusions">
@@ -295,91 +268,6 @@ export function TourDetails() {
                                 </div>
                             </div>
                         </CardContent>
-                    </Card>
-
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="text-red-800">
-                                Book Your Tour
-                            </CardTitle>
-                            <CardDescription>
-                                Select your preferred date and number of guests
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="space-y-4">
-                                <div>
-                                    <label
-                                        htmlFor="date"
-                                        className="block text-sm font-medium text-red-700 mb-1"
-                                    >
-                                        Date
-                                    </label>
-                                    <input
-                                        type="date"
-                                        id="date"
-                                        className="w-full p-2 border border-red-300 rounded-md"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor="guests"
-                                        className="block text-sm font-medium text-red-700 mb-1"
-                                    >
-                                        Number of Guests
-                                    </label>
-                                    <div className="flex items-center">
-                                        <Button
-                                            onClick={() =>
-                                                setGuests(
-                                                    Math.max(1, guests - 1)
-                                                )
-                                            }
-                                            className="bg-red-200 text-red-800 px-3 py-1 rounded-l-md"
-                                        >
-                                            -
-                                        </Button>
-                                        <input
-                                            type="number"
-                                            id="guests"
-                                            value={guests}
-                                            onChange={(e) =>
-                                                setGuests(
-                                                    Math.max(
-                                                        1,
-                                                        Math.min(
-                                                            8,
-                                                            parseInt(
-                                                                e.target.value
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            }
-                                            className="w-16 text-center border-t border-b border-red-300 py-1"
-                                        />
-                                        <Button
-                                            onClick={() =>
-                                                setGuests(
-                                                    Math.min(8, guests + 1)
-                                                )
-                                            }
-                                            className="bg-red-200 text-red-800 px-3 py-1 rounded-r-md"
-                                        >
-                                            +
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </CardContent>
-                        <CardFooter>
-                            <Button
-                                onClick={handleBooking}
-                                className="w-full bg-red-600 hover:bg-red-700 text-white"
-                            >
-                                Book Now - $99 per person
-                            </Button>
-                        </CardFooter>
                     </Card>
 
                     {bookingCode && (

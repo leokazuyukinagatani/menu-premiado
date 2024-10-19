@@ -1,8 +1,9 @@
 import { Main } from "@/sections/Main";
-import { TourDetails } from "@/sections/TourDetails";
+
 import { CheckIn } from "@/pages/check-in";
 import { createBrowserRouter } from "react-router-dom";
 import { RoadMap } from "@/pages/road-map";
+import { TourDetails } from "@/pages/TourDetails";
 import { SignUp } from "@/pages/sign-up";
 
 export const router = createBrowserRouter([
