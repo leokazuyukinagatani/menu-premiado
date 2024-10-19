@@ -312,3 +312,13 @@
 
   /*  END of Footer*/
 }
+
+.hidden-on-small {
+  display: none;
+}
+
+@media (min-width: 370px) {
+  .hidden-on-small {
+    display: inline; /* or inline-block if you need it to take up space */
+  }
+}
