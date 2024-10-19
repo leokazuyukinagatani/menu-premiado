@@ -55,7 +55,7 @@ export function Hero() {
     ];
 
     function handleClickRoteiro() {
-        navigate("/");
+        navigate("/road-map");
     }
 
     useEffect(() => {
@@ -74,7 +74,7 @@ export function Hero() {
     return (
         <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <div className="flex flex-col lg:flex-row items-center justify-between">
-                <div className="lg:w-1/2 mb-8 lg:mb-0">
+                <div className="lg:w-1/2 mb-8 lg:mb-0 text-left">
                     <h2 className="text-4xl lg:text-5xl font-bold text-red-700 mb-4">
                         GastronoCity
                     </h2>
@@ -82,9 +82,9 @@ export function Hero() {
                         Você e sua família aproveitando o melhor da culinária
                         local com um gostinho de quero mais!
                     </p>
-                    <div className="flex space-x-4 mb-8">
+                    <div className="flex space-x-4 mb-8  h-16 justify-start">
                         <Button
-                            className="bg-red-700 hover:bg-red-600 text-white"
+                            className="bg-red-700 hover:bg-red-600 text-white h-auto rounded-14 w-48 text-lg"
                             onClick={handleClickRoteiro}
                         >
                             Meu Roteiro
@@ -142,7 +142,7 @@ export function Hero() {
                 </div>
             </div>
 
-            <div className="mt-16">
+            {/* <div className="mt-16">
                 <h3 className="text-2xl font-semibold text-red-800 mb-6 text-center">
                     Tours Recomendados
                 </h3>
@@ -185,7 +185,7 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-        
+         */}
             <section className="py-12 bg-yellow-50">
                 <div className="container mx-auto px-4">
                     <h3 className="text-3xl font-semibold text-red-800 mb-8 text-center">
