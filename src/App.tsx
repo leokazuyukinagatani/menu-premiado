@@ -5,12 +5,12 @@ import { Toaster } from "./components/ui/toaster";
 import { router } from "./routes";
 
 function App() {
-    return (
-        <div>
-            <RouterProvider router={router} />
-            <Toaster />
-        </div>
-    );
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Toaster />
+    </>
+  );
 }
 
 export default App;
