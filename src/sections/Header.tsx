@@ -28,7 +28,7 @@ export function Header() {
             <div className="container flex h-14 items-center max-lg:px-5">
                 <a href="/" className="lg:hidden flex-1 cursor-pointer z-2">
                     <img
-                        src="/images/logo_gastrono_city.png"
+                        src="/images/logo_gastrono_city_md.svg"
                         alt="logo"
                         width={115}
                         height={55}
@@ -63,7 +63,7 @@ export function Header() {
                                         )}
                                     >
                                         <img
-                                            src="/images/logo_gastrono_city.png"
+                                            src="/images/logo_gastrono_city_md.svg"
                                             alt="logo"
                                             width={160}
                                             height={55}
