@@ -11,11 +11,10 @@ export function Hero() {
             <div className="flex flex-col lg:flex-row items-center justify-between">
                 <div className="lg:w-1/2 mb-8 lg:mb-0">
                     <h2 className="text-4xl lg:text-5xl font-bold text-red-700 mb-4">
-                        Discover Culinary Delights in Your City
+                        GastronoCity
                     </h2>
                     <p className="text-xl text-red-700 mb-6">
-                        Join our gastronomic tours and experience the best local
-                        flavors, hidden gems, and foodie hotspots!
+                        Você e sua família aproveitando o melhor da culinária local com um gostinho de quero mais!
                     </p>
                     <div className="flex space-x-4 mb-8">
                         <Button className="bg-red-700 hover:bg-red-600 text-white">
@@ -81,7 +80,7 @@ export function Hero() {
                             className="bg-yellow-50 rounded-lg shadow-md overflow-hidden"
                         >
                             <img
-                                src={"/placeholder.svg?height=200&width=400"}
+                                src={"/images/logo_gastrono_city_mostarda.png?height=200&width=400"}
                                 alt={`Tour ${tour}`}
                                 className="w-full h-48 object-cover"
                             />

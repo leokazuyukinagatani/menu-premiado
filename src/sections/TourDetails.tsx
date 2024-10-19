@@ -121,7 +121,7 @@ export function TourDetails() {
                             Gourmet Adventure Tour
                         </h2>
                         <img
-                            src="/placeholder.svg?height=400&width=800"
+                            src="..\public\images\logo_agua_doce_cachacaria.png?height=400&width=800"
                             alt="Gourmet Adventure Tour"
                             className="w-full h-64 object-cover rounded-lg mb-6"
                         />

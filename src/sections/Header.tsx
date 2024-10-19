@@ -27,13 +27,13 @@ export function Header() {
         <header className="fixed top-0 left-0 z-50 w-full py-10 bg-s6">
             <div className="container flex h-14 items-center max-lg:px-5">
                 <a href="/" className="lg:hidden flex-1 cursor-pointer z-2">
-                    {/* <img
-                        src="/images/xora.svg"
+                    <img
+                        src="/images/logo_gastrono_city.png"
                         alt="logo"
                         width={115}
                         height={55}
-                    /> */}
-                    Menu Premiado
+                    />
+                    GastronoCity
                 </a>
 
                 <div
@@ -62,13 +62,13 @@ export function Header() {
                                             "max-lg:hidden transition-transform duration-500 cursor-pinter"
                                         )}
                                     >
-                                        {/* <img
-                                            src="/images/xora.svg"
+                                        <img
+                                            src="/images/logo_gastrono_city.png"
                                             alt="logo"
                                             width={160}
                                             height={55}
-                                        /> */}
-                                        Menu Premiado
+                                        />
+                                        GastronoCity
                                     </LinkScroll>
                                 </li>
 
